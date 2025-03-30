@@ -35,7 +35,8 @@ function App() {
   return (
     <div>
 
-      <h1 className='text-4xl text-orange-500 text-center mt-5'>TODO APP</h1>
+      <h1 className='text-4xl text-orange-500 text-center mt-5 font-bold mb-5 transition-all duration-500 hover:text-orange-800 hover:scale-105 '>PrioriTask</h1>
+      <p class="text-black text-center mb-3 text-2xl">Manage your tasks efficiently...</p>
 
       <div className='bg-white flex justify-around pt-2'>
         
@@ -89,9 +90,9 @@ function App() {
         }
         value={todoItem.priority}>
           <option value={'select priority'}>select priority</option>
-          <option value={'high'} >High</option>
-          <option value={'low'}>Low</option>
-          <option value={'medium'}>Medium</option>
+          <option value={'high'} > 🔥High</option>
+          <option value={'low'}>⚡Low</option>
+          <option value={'medium'}>📄Medium</option>
         </select>
         <button className=' text-2xl bg-orange-500 px-10  rounded-md ml-5 h-10 cursor-pointer'
         onClick={()=>{
