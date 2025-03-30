@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import Todocard from './component/Card/Todocard';
 
+
 function App() {
   const [todoItem, settodoItem] = useState({
     task: '',
@@ -41,7 +42,7 @@ function App() {
         {
           ['all', 'high', 'medium', 'low'].map((tab, i) => {
             return (
-            <span className={`  block w-[100px] m-2 md:w-[250px] text-lg md:text-xl border-1 text-center rounded-tl-lg rounded-tr-lg py-1 text-orange-500 cursor-pointer
+            <span className={`  block w-[100px] m-2  md:w-[250px] text-lg md:text-xl border-1 text-center rounded-tl-lg rounded-tr-lg py-1 text-orange-500 cursor-pointer
             ${
               tab === selsectedTab? 'bg-blue-950 text-black' : 'bg-white'}`} 
               key={i} onClick={() => setSelectedTab(tab)}>
@@ -102,6 +103,10 @@ function App() {
             toast.error('Please select the priority');
             return;
           }
+
+          setSelectedTab('all');
+
+
           setToDoList([todoItem,...todoList]);
           settodoItem({
             task: '',
